@@ -2,11 +2,12 @@
 pip install -r requirements.txt
 
 # Usage
-- Parameters can be randomly generalized according to children speech statistics
+- Parameters can be randomly generalized according to children speech statistics:
 ```
 python childrenize.py <input audo> <output audio>
 ```
-- Parameters can be also specified
+
+- Parameters can be also specified, like follows:
 ```
 python childrenize.py -f 300 <input audo> <output audio>
 ```
