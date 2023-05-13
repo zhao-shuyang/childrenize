@@ -78,12 +78,12 @@ def randomize_parameters(sig, fs,
 
     params = {}
     if target_f0 is None:
-        params['target_f0'] = np.random.randint(240, 300)
+        params['target_f0'] = np.random.uniform(240, 300)
     else:
-        params['target_f0'] = int(target_f0)
+        params['target_f0'] = float(target_f0)
 
     if vowel_stretch_factor is None:
-        params['vowel_stretch_factor'] = 1.1 + np.random.random() * 0.3
+        params['vowel_stretch_factor'] = np.random.uniform(1.1, 1.4)
     else:
         params['vowel_stretch_factor'] = float(vowel_stretch_factor)
 
@@ -95,14 +95,14 @@ def randomize_parameters(sig, fs,
         if f0_mean < GENDER_F0_THRESHOLD:  # Assuming the utterance to be male adult
             params['warping_function'] = 'linear'
             if warping_factor is None:
-                params['warping_factor'] = 1.2 + np.random.random() * 0.2
+                params['warping_factor'] = np.random.uniform(1.2, 1.4)
             else:
                 params['warping_factor'] = float(warping_factor)
 
         else:
             params['warping_function'] = 'piecewise'
             if warping_factor is None:
-                params['warping_factor'] = 1.1 + np.random.random() * 0.15
+                params['warping_factor'] = np.random.uniform(1.1, 1.25)
             else:
                 params['warping_factor'] = float(warping_factor)
 
