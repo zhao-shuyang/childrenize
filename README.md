@@ -1,3 +1,6 @@
+# Introduction 
+This code repository includes an implementation of voice conversion method to generate childlike speech based on WORLD vocoder. It maps adult speech characteristics into children ones, modifications are made based on a children acoustic study \cite{DBLP:journals/jasa/Lee1999}. The original motivation was data augmentation to improve ASR performance on children speakers.
+
 # Installation
 pip install -r requirements.txt
 
