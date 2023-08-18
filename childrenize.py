@@ -115,9 +115,6 @@ def main():
     filename = args.input_audio
     x, fs = sf.read(filename)
     params = randomize_parameters(x, fs, target_f0=args.target_f0, warping_factor=args.warping_factor, vowel_stretch_factor=args.vowel_stretch_factor)
-    params['target_f0'] = 270
-    params['vowel_stretch_factor'] = 1.3
-    params['warping_factor'] = 1.2
     print (params)
     y = process(x, fs, **params)
     sf.write(args.output_audio, y, fs)    
